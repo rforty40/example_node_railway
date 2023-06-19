@@ -1,6 +1,6 @@
 import express from "express";
 import { pool } from "./db.js";
-import { PORT } from "./config.js";
+import { PORT, URL_PUBLIC } from "./config.js";
 
 const app = express();
 
@@ -20,4 +20,5 @@ app.get("/create", async (req, res) => {
 });
 
 app.listen(PORT);
+console.log("URL PUBLIC --> ", URL_PUBLIC);
 console.log("Server on port, Servidor en el puerto", PORT);
